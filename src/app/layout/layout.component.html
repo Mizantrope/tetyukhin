@@ -1,6 +1,7 @@
-<ul>
-    <li *ngFor="let lang of translate.getLangs()">
-        <a (click)="setLang(lang)">{{ lang }}</a>
-    </li>
-</ul>
-{{ 'home.title' | translate }}
+<div id="layout">
+    <div class="nav"></div>
+    <div class="main">
+        <router-outlet></router-outlet>
+    </div>
+    <footer class="footer"></footer>
+</div>
