@@ -1,0 +1,49 @@
+@import '_variables';
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.nav {
+    background-color: $nav-bg;
+    border-right: 0.125rem solid $nav-border;
+    transition: width 0.5s ease;
+    width: 3.75rem;
+    z-index: 50;
+
+    &:hover {
+        width: 13.125rem;
+
+        & ~ .main {
+            &::after {
+                background: rgba(0, 0, 0, 0.5);
+                bottom: 0;
+                content: ' ';
+                left: 60px;
+                opacity: 1;
+                position: fixed;
+                right: 0;
+                top: 0;
+                z-index: 25;
+            }
+        }
+    }
+}
+
+.main {
+    right: 0;
+
+    &__inner {
+        height: 100%;
+    }
+}
+
+.nav,
+.main {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+}

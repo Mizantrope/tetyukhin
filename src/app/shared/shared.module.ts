@@ -6,6 +6,7 @@ import { PhotoGalleryModule } from '../pages/photo-gallery/photo-gallery.module'
 import { VideoGalleryModule } from '../pages/video-gallery/video-gallery.module';
 import { RusTeamModule } from '../pages/rus-team/rus-team.module';
 import { StatisticsModule } from '../pages/statistics/statistics.module';
+import { SimplebarAngularModule } from 'simplebar-angular';
 
 @NgModule({
     declarations: [],
@@ -16,8 +17,9 @@ import { StatisticsModule } from '../pages/statistics/statistics.module';
         PhotoGalleryModule,
         VideoGalleryModule,
         RusTeamModule,
-        StatisticsModule
+        StatisticsModule,
+        SimplebarAngularModule
     ],
-    exports: []
+    exports: [SimplebarAngularModule]
 })
 export class SharedModule {}

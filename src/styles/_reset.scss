@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    background-color: $body-bg;
+    color: $body-color;
+    font-family: $font;
+    line-height: 1.4;
+    min-width: 20rem;
+}
