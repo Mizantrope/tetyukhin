@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let lang of translate.getLangs()">
+        <a (click)="setLang(lang)">{{ lang }}</a>
+    </li>
+</ul>
+{{ 'home.title' | translate }}

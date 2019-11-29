@@ -1,0 +1,9 @@
+# Add files here to ignore them from prettier formatting
+
+/.idea
+/.vscode
+/package-lock.json
+/dist
+/coverage
+/node_modules
+/libs/generated-api/src/lib/
