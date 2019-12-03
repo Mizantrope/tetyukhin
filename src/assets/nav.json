@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Профайл",
+        "link": "profile",
+        "ico": ""
+    },
+    {
+        "name": "Достижения",
+        "link": "achievements",
+        "ico": ""
+    },
+    {
+        "name": "Сборная России",
+        "link": "rus-team",
+        "ico": ""
+    },
+    {
+        "name": "Статистика",
+        "link": "statistics",
+        "ico": ""
+    },
+    {
+        "name": "Видеогалерея",
+        "link": "video-gallery",
+        "ico": ""
+    },
+    {
+        "name": "Фотогалерея",
+        "link": "photo-gallery",
+        "ico": ""
+    }
+]

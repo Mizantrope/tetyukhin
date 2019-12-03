@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { default as nav} from 'src/assets/nav.json';
 
 @Component({
     selector: 'app-layout',
@@ -7,8 +8,8 @@ import { TranslateService } from '@ngx-translate/core';
     styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent {
-    public numbers = Array(50);
     public currentLang: string;
+    public navItems = nav;
     constructor(public translate: TranslateService) {
         translate.addLangs(['en', 'ru']);
         translate.setDefaultLang('ru');
