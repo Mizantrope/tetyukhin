@@ -1,3 +1,4 @@
+@import '_functions';
 @import '_variables';
 
 :host {
@@ -10,11 +11,25 @@
     background-color: $nav-bg;
     border-right: 0.125rem solid $nav-border;
     transition: width 0.5s ease;
-    width: 3.75rem;
+    width: $navWidth;
     z-index: 50;
 
+    @include min-width(lg) {
+        &::after {
+            background-image: url('/assets/images/bg-nav.png');
+            background-repeat: no-repeat;
+            background-size: 3.75rem;
+            content: ' ';
+            height: 60px;
+            left: 100%;
+            position: absolute;
+            top: 0;
+            width: $navWidth;
+        }
+    }
+
     &:hover {
-        width: 13.125rem;
+        width: $navWidthOpened;
 
         & ~ .main {
             &::after {
@@ -30,6 +45,33 @@
             }
         }
     }
+
+    // Brand
+    .brand {
+        align-items: center;
+        background-color: $red;
+        color: $white;
+        display: flex;
+        height: 3.75rem;
+
+        &__number {
+            font-family: $font-custom;
+            font-size: 1.875rem;
+            margin-left: 1.25rem;
+        }
+
+        &__author {
+            font-size: 1rem;
+            margin-left: 0.9375rem;
+            opacity: 0;
+            transition: opacity 0.75s ease;
+            white-space: nowrap;
+        }
+    }
+
+    // Menu
+
+    // Langs
 }
 
 .main {

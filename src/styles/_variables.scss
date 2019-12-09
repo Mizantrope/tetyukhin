@@ -1,15 +1,29 @@
 // Colors
 $red: #bf1930;
 $grey: #b9bbbf;
+$white: #fff;
 
 // Theme colors
 $body-bg: #050e1b;
-$body-color: #fff;
+$body-color: $white;
 
 $nav-bg: #050e1b;
 $nav-border: #bf1930;
 $nav-bg-over: #17273d;
+$navWidth: 3.75rem;
+$navWidthOpened: 13.125rem;
 
 // Fonts
 $font: 'PT Sans', sans-serif;
 $font-custom: 'Russo One',sans-serif;
+
+// Grid
+$breakpoints: (
+    xs: 0,
+    sm: 26rem,
+    md: 38.75rem,
+    lg: 64rem,
+    xl: 90rem
+);
+
+// 416px, 620px, 1024px, 1150px, 1440px

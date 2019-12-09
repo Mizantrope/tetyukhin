@@ -1,15 +1,27 @@
 <div class="nav">
-    <ul>
-        <li *ngFor="let item of navItems">
-            <a [routerLink]="'/' + item.link">
-                <span>{{ item.name }}</span>
+    <a routerLink="/" class="brand">
+        <span class="brand__number">8</span>
+        <span class="brand__author">{{ 'menu.author' | translate }}</span>
+    </a>
+    <ul class="menu">
+        <li class="menu__item" *ngFor="let item of navItems">
+            <a class="menu__link" [routerLink]="'/' + item.link" [routerLinkActive]="['menu__link--active']">
+                <span class="menu__ico icon-{{ item.ico }}"></span>
+                <span class="menu__name">{{ item.name | translate }}</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="langs">
+        <li class="langs__item" *ngFor="let lang of langs">
+            <a class="langs__link" [ngClass]="{ 'langs__link--active': lang === currentLang }" (click)="setLang(lang)">
+                <img [src]="'icons/flags/' + lang + '.svg' | image" alt="">
             </a>
         </li>
     </ul>
 </div>
 <div class="main">
     <ngx-simplebar class="main__inner">
-
+        <router-outlet></router-outlet>
     </ngx-simplebar>
 </div>
 <footer class="footer"></footer>

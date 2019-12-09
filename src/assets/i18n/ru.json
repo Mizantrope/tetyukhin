@@ -1,5 +1,11 @@
 {
-    "home": {
-        "title": "Сергей Тетюхин"
+    "menu": {
+        "author": "Тетюхин Сергей",
+        "profile": "Профайл",
+        "achievements": "Достижения",
+        "rus-team": "Сборная России",
+        "statistics": "Статистика",
+        "video-gallery": "Видеогалерея",
+        "photo-gallery": "Фотогалерея"
     }
 }

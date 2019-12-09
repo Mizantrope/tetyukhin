@@ -1,32 +1,32 @@
 [
     {
-        "name": "Профайл",
+        "name": "menu.profile",
         "link": "profile",
-        "ico": ""
+        "ico": "profile"
     },
     {
-        "name": "Достижения",
+        "name": "menu.achievements",
         "link": "achievements",
-        "ico": ""
+        "ico": "achievements"
     },
     {
-        "name": "Сборная России",
+        "name": "menu.rus-team",
         "link": "rus-team",
-        "ico": ""
+        "ico": "rus-team"
     },
     {
-        "name": "Статистика",
+        "name": "menu.statistics",
         "link": "statistics",
-        "ico": ""
+        "ico": "statistics"
     },
     {
-        "name": "Видеогалерея",
+        "name": "menu.video-gallery",
         "link": "video-gallery",
-        "ico": ""
+        "ico": "video-gallery"
     },
     {
-        "name": "Фотогалерея",
+        "name": "menu.photo-gallery",
         "link": "photo-gallery",
-        "ico": ""
+        "ico": "photo-gallery"
     }
 ]

@@ -1,0 +1,11 @@
+@mixin min-width($name) {
+    @media (min-width: map-get($breakpoints, $name)) {
+        @content;
+    }
+}
+
+@mixin max-width($name) {
+    @media (max-width: map-get($breakpoints, $name)) {
+        @content;
+    }
+}

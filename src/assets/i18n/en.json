@@ -1,5 +1,11 @@
 {
-    "home": {
-        "title": "Sergey Tetyukhin"
+    "menu": {
+        "author": "Tetyukhin Sergey",
+        "profile": "Profile",
+        "achievements": "Achievements",
+        "rus-team": "National Team",
+        "statistics": "Statistics",
+        "video-gallery": "Videos",
+        "photo-gallery": "Photo Gallery"
     }
 }
