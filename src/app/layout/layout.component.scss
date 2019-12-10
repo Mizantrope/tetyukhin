@@ -1,10 +1,32 @@
-@import '_functions';
 @import '_variables';
+@import '_functions';
 
 :host {
     display: flex;
     flex-direction: column;
     height: 100%;
+
+    ::ng-deep {
+        .simplebar-track.simplebar-vertical {
+            width: 0.25rem;
+        }
+
+        .simplebar-scrollbar {
+            right: 0;
+            width: 100%;
+        }
+
+        .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+            background-color: $white;
+            border-radius: 0;
+            bottom: 0;
+            top: 0;
+        }
+
+        .simplebar-content {
+            height: inherit;
+        }
+    }
 }
 
 .nav {
@@ -12,7 +34,7 @@
     border-right: 0.125rem solid $nav-border;
     transition: width 0.5s ease;
     width: $navWidth;
-    z-index: 50;
+    z-index: 1000;
 
     @include min-width(lg) {
         &::after {
@@ -28,24 +50,6 @@
         }
     }
 
-    &:hover {
-        width: $navWidthOpened;
-
-        & ~ .main {
-            &::after {
-                background: rgba(0, 0, 0, 0.5);
-                bottom: 0;
-                content: ' ';
-                left: 60px;
-                opacity: 1;
-                position: fixed;
-                right: 0;
-                top: 0;
-                z-index: 25;
-            }
-        }
-    }
-
     // Brand
     .brand {
         align-items: center;
@@ -55,26 +59,148 @@
         height: 3.75rem;
 
         &__number {
+            flex: 0 0 1.875rem;
             font-family: $font-custom;
             font-size: 1.875rem;
-            margin-left: 1.25rem;
+            margin-left: 0.875rem;
+            text-align: center;
+            width: 1.875rem;
         }
 
         &__author {
             font-size: 1rem;
             margin-left: 0.9375rem;
-            opacity: 0;
-            transition: opacity 0.75s ease;
-            white-space: nowrap;
         }
     }
 
     // Menu
+    .menu--nav {
+        overflow: hidden;
+
+        .menu__item {
+            margin: 0.3125rem 0;
+        }
+
+        .menu__link {
+            align-items: center;
+            color: $white;
+            cursor: pointer;
+            display: flex;
+            height: $navWidth;
+            position: relative;
+            transition: background-color 0.35s ease-in-out;
+
+            &::after {
+                background: $red;
+                bottom: 0;
+                content: ' ';
+                left: 0;
+                position: absolute;
+                top: 0;
+                transition: width 0.35s ease-in-out;
+                width: 0;
+            }
+
+            &:hover {
+                background-color: $nav-bg-over;
+            }
+
+            &--active {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        .menu__ico {
+            font-size: 1.875rem;
+            margin-left: 0.875rem;
+        }
+
+        .menu__name {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+        }
+    }
 
     // Langs
+    .menu--langs {
+        left: 100%;
+        padding-left: 0.625rem;
+        position: absolute;
+        top: $navWidth;
+
+        .menu__item {
+            margin: 0.625rem 0;
+        }
+
+        .menu__link {
+            cursor: pointer;
+            display: block;
+
+            &--active {
+                .menu__pic {
+                    height: 1.875rem;
+                    width: 1.875rem;
+                }
+            }
+        }
+
+        .menu__pic {
+            border: 0.125rem solid $white;
+            border-radius: 2rem;
+            box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+            display: block;
+            height: 1.5rem;
+            margin: 0 auto;
+            width: 1.5rem;
+        }
+    }
+
+    .menu__link--active {
+        pointer-events: none;
+    }
+
+    .brand__author,
+    .menu--nav .menu__name {
+        margin-left: 0.875rem;
+        opacity: 0;
+        transition: opacity 0.75s ease;
+        white-space: nowrap;
+    }
+
+    .menu--nav .menu__ico,
+    .menu--nav .menu__name {
+        position: relative;
+        z-index: 5;
+    }
+
+    &:hover {
+        width: $navWidthOpened;
+
+        .brand__author,
+        .menu--nav .menu__name {
+            opacity: 1;
+        }
+
+        & ~ .main {
+            &::before {
+                background: rgba(0, 0, 0, 0.5);
+                bottom: 0;
+                content: ' ';
+                left: 0;
+                opacity: 1;
+                position: fixed;
+                right: 0;
+                top: 0;
+                z-index: 25;
+            }
+        }
+    }
 }
 
 .main {
+    margin-left: $navWidth;
     right: 0;
 
     &__inner {

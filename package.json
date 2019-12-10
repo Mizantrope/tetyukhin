@@ -21,6 +21,7 @@
     "@angular/router": "~8.2.11",
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
+    "ngx-masonry-gallery": "^3.0.0",
     "rxjs": "~6.4.0",
     "simplebar-angular": "^2.0.1",
     "tslib": "^1.10.0",

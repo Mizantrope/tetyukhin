@@ -1,0 +1,6 @@
+@import '_extends';
+
+:host {
+    background-image: url('/assets/images/statistics/bg.jpg');
+    @extend %component;
+}

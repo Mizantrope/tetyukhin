@@ -1,0 +1,53 @@
+@import '_functions';
+@import '_variables';
+
+.loading {
+    background-color: rgba(0, 0, 0, 0.85);
+    bottom: 0;
+    left: 0;
+    margin-left: $navWidth;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 500;
+}
+
+.spinner {
+    width: 3.75rem;
+    animation: rotate 2s linear infinite;
+    transform-origin: center center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    .circle {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+        animation: dash 1.5s ease-in-out infinite;
+        stroke-linecap: round;
+        stroke: $red;
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+    }
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+    }
+}
