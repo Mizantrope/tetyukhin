@@ -1,0 +1,12 @@
+<ul class="list" [ngSwitch]="view">
+    <ng-template *ngSwitchCase="'achievements'">
+        <li class="list__item" *ngFor="let item of items">
+            <div class="list__inner"></div>
+        </li>
+    </ng-template>
+    <ng-template *ngSwitchDefault>
+        <li class="list__item" *ngFor="let item of items">
+            <div class="list__inner">1</div>
+        </li>
+    </ng-template>
+</ul>
