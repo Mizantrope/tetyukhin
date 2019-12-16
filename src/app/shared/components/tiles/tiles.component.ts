@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./tiles.component.scss']
 })
 export class TilesComponent {
+    public switchVar = 10;
     @Input() items: [] = [];
-    @Input() view: 'achievements' | 'test' = 'test';
+    @Input() view: 'home' | 'achievements' | 'statistics' | 'gallery';
 }

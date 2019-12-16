@@ -1,12 +1,18 @@
-<ul class="list" [ngSwitch]="view">
-    <ng-template *ngSwitchCase="'achievements'">
+<ng-container [ngSwitch]="view">
+    <ul class="list" *ngSwitchCase="'home'">
         <li class="list__item" *ngFor="let item of items">
-            <div class="list__inner"></div>
+            <div class="list__inner">Home</div>
         </li>
-    </ng-template>
-    <ng-template *ngSwitchDefault>
+    </ul>
+    <ul class="list" *ngSwitchDefault>
         <li class="list__item" *ngFor="let item of items">
-            <div class="list__inner">1</div>
+            <div class="list__inner">Profile</div>
         </li>
-    </ng-template>
-</ul>
+    </ul>
+</ng-container>
+<!-- <div [ngSwitch]="view">
+    <p *ngSwitchCase="'Angular'">Angular Course</p>
+    <p *ngSwitchCase="'TypeScript'">TypeScript Course</p>
+    <p *ngSwitchCase="'JavaScript'">JavaScript Course</p>
+    <p *ngSwitchDefault>HTML Course</p>
+  </div> -->

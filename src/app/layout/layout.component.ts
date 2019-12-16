@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
-import { default as nav } from 'src/assets/nav.json';
+import { default as nav } from 'src/assets/settings/nav.json';
 
 @Component({
     selector: 'app-layout',

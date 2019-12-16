@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
     public items = new Array(20);
+    public view = 'home';
 }

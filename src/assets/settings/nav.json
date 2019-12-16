@@ -1,0 +1,32 @@
+[
+    {
+        "name": "menu.profile",
+        "link": "profile",
+        "ico": "profile"
+    },
+    {
+        "name": "menu.achievements",
+        "link": "achievements",
+        "ico": "achievements"
+    },
+    {
+        "name": "menu.rus-team",
+        "link": "rus-team",
+        "ico": "rus-team"
+    },
+    {
+        "name": "menu.statistics",
+        "link": "statistics",
+        "ico": "statistics"
+    },
+    {
+        "name": "menu.video-gallery",
+        "link": "video-gallery",
+        "ico": "video-gallery"
+    },
+    {
+        "name": "menu.photo-gallery",
+        "link": "photo-gallery",
+        "ico": "photo-gallery"
+    }
+]

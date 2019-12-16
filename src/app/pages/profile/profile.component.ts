@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
     public items = new Array(5);
-    public view = 'achievements';
+    public view = 'profile';
 }
