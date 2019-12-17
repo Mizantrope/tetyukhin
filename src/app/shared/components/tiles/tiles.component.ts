@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class TilesComponent {
     public switchVar = 10;
-    @Input() items: [] = [];
-    @Input() view: 'home' | 'achievements' | 'statistics' | 'gallery';
+    @Input() items: [];
+    @Input() view: any;
 }

@@ -7,5 +7,17 @@
         "statistics": "统计",
         "video-gallery": "视频",
         "photo-gallery": "照片游廊"
+    },
+    "socials": {
+        "vk": "订",
+        "fb": "联合!",
+        "tw": "看新新闻",
+        "ins": "看，注意知道 ;)"
+    },
+    "statistics": {
+        "scores": "获得分",
+        "rallies": "赢了球",
+        "official-matches": "官方比赛",
+        "serves": "赢回传球"
     }
 }

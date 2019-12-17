@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { default as homeTiles } from 'src/assets/settings/home-tiles.json';
 
 @Component({
     selector: 'app-home',
@@ -6,6 +7,6 @@ import { Component } from '@angular/core';
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-    public items = new Array(20);
+    public items = homeTiles;
     public view = 'home';
 }

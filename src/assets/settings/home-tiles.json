@@ -1,32 +1,19 @@
 [
     {
-        "name": "menu.profile",
-        "link": "profile",
-        "ico": "profile"
+        "type": "team",
+        "name": "menu.rus-team"
     },
     {
-        "name": "menu.achievements",
-        "link": "achievements",
-        "ico": "achievements"
+        "type": "socials",
+        "name": "socials.vk"
     },
     {
-        "name": "menu.rus-team",
-        "link": "rus-team",
-        "ico": "rus-team"
+        "type": "socials"
     },
     {
-        "name": "menu.statistics",
-        "link": "statistics",
-        "ico": "statistics"
+        "type": "socials"
     },
     {
-        "name": "menu.video-gallery",
-        "link": "video-gallery",
-        "ico": "video-gallery"
-    },
-    {
-        "name": "menu.photo-gallery",
-        "link": "photo-gallery",
-        "ico": "photo-gallery"
+        "type": "socials"
     }
 ]

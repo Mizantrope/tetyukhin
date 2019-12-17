@@ -1,18 +1,10 @@
-<ng-container [ngSwitch]="view">
-    <ul class="list" *ngSwitchCase="'home'">
-        <li class="list__item" *ngFor="let item of items">
-            <div class="list__inner">Home</div>
-        </li>
-    </ul>
-    <ul class="list" *ngSwitchDefault>
-        <li class="list__item" *ngFor="let item of items">
-            <div class="list__inner">Profile</div>
-        </li>
-    </ul>
-</ng-container>
-<!-- <div [ngSwitch]="view">
-    <p *ngSwitchCase="'Angular'">Angular Course</p>
-    <p *ngSwitchCase="'TypeScript'">TypeScript Course</p>
-    <p *ngSwitchCase="'JavaScript'">JavaScript Course</p>
-    <p *ngSwitchDefault>HTML Course</p>
-  </div> -->
+<ul class="list" [ngSwitch]="view">
+    <li class="list__item" [ngClass]="item.type" *ngFor="let item of items">
+        <div *ngIf="item.type === 'team'">
+            Team
+        </div>
+        <div *ngIf="item.type === 'socials'">
+            Socials
+        </div>
+    </li>
+</ul>

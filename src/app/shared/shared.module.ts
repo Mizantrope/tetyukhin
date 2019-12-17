@@ -7,8 +7,8 @@ import { TilesComponent } from './components/tiles/tiles.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
-    declarations: [ImagePipe, LoaderComponent, TilesComponent, TranslateModule],
-    imports: [CommonModule],
+    declarations: [ImagePipe, LoaderComponent, TilesComponent],
+    imports: [CommonModule, TranslateModule],
     exports: [ImagePipe, LoaderComponent, TilesComponent, TranslateModule],
     providers: [ImagePipe]
 })

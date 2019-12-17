@@ -7,5 +7,17 @@
         "statistics": "Statistics",
         "video-gallery": "Videos",
         "photo-gallery": "Photo Gallery"
+    },
+    "socials": {
+        "vk": "Follow us",
+        "fb": "Joinus!",
+        "tw": "Read our hot news",
+        "ins": "Watch to be in the know ;)"
+    },
+    "statistics": {
+        "scores": "Scores",
+        "rallies": "Rallies",
+        "official-matches": "Official matches",
+        "serves": "Serves"
     }
 }
